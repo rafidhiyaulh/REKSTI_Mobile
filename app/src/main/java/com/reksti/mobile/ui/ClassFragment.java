@@ -1,4 +1,3 @@
-// ClassFragment.java
 package com.reksti.mobile.ui;
 
 import android.os.Bundle;
@@ -29,7 +28,6 @@ public class ClassFragment extends Fragment {
 
     private EditText etClassUid;
     private TextView tvResult;
-    private Button btnFetch;
 
     public ClassFragment() {}
 
@@ -42,7 +40,7 @@ public class ClassFragment extends Fragment {
 
         etClassUid = view.findViewById(R.id.et_class_uid);
         tvResult = view.findViewById(R.id.tv_class_info);
-        btnFetch = view.findViewById(R.id.btn_fetch_class);
+        Button btnFetch = view.findViewById(R.id.btn_fetch_class);
 
         btnFetch.setOnClickListener(v -> fetchClassInfo());
 
@@ -65,7 +63,10 @@ public class ClassFragment extends Fragment {
                 if (response.isSuccessful() && response.body() != null) {
                     StringBuilder builder = new StringBuilder();
                     for (Map<String, Object> student : response.body().getStudents()) {
-                        builder.append(student.toString()).append("\n\n");
+                        String nim = String.valueOf(student.get("NIM"));
+                        String status = String.valueOf(student.get("status"));
+                        builder.append("NIM: ").append(nim)
+                                .append(" | Status: ").append(status).append("\n");
                     }
                     tvResult.setText(builder.toString());
                 } else {
