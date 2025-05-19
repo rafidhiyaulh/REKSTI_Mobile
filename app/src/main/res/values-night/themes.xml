@@ -1,15 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.SmartPresence" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/smart_primary</item>
-        <item name="colorPrimaryVariant">@color/smart_primary_variant</item>
-        <item name="colorOnPrimary">@android:color/white</item>
+        <!-- Warna utama -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
+        <item name="colorOnPrimary">@color/textPrimary</item>
 
-        <item name="colorSecondary">@color/smart_secondary</item>
-        <item name="colorOnSecondary">@android:color/black</item>
+        <!-- Background -->
+        <item name="android:colorBackground">@color/backgroundColor</item>
+        <item name="colorSurface">@color/surfaceColor</item>
+        <item name="colorOnSurface">@color/textPrimary</item>
 
-        <item name="android:colorBackground">@color/smart_background</item>
+        <!-- Text -->
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
 
+        <!-- Komponen -->
+        <item name="buttonStyle">@style/SmartButton</item>
+    </style>
+
+    <!-- Gaya tombol -->
+    <style name="SmartButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/primaryColor</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:windowBackground">@color/smart_background</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:elevation">2dp</item>
     </style>
 </resources>
