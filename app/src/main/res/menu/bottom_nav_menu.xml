@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/nav_register"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="Register" />
+    <item
+        android:id="@+id/nav_attend"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="Absensi" />
+    <item
+        android:id="@+id/nav_class_info"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Info Kelas" />
+    <item
+        android:id="@+id/nav_create_class"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Buat Kelas" />
+</menu>

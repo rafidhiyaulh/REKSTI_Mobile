@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_student_list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="Masukkan daftar NIM (satu per baris)"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:background="#E0E0E0"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_create_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buat Kelas"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tv_class_uid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class UID akan muncul di sini"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:textColor="#333333" />
+    </LinearLayout>
+</ScrollView>

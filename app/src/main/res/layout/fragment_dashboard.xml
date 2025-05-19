@@ -6,7 +6,7 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/namaTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama: ..."
@@ -14,9 +14,18 @@
         android:paddingBottom="8dp" />
 
     <TextView
-        android:id="@+id/tv_log"
+        android:id="@+id/jumlahKelasTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Jumlah kelas: ..."
         android:textSize="16sp" />
+
+    <Button
+    android:id="@+id/btn_register_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Ke Form Registrasi"
+    android:layout_marginTop="16dp" />
+
+
 </LinearLayout>

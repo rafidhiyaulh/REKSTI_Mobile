@@ -7,14 +7,35 @@ public class SharedPrefManager {
 
     private static final String PREF_NAME = "reksti_prefs";
     private static final String KEY_BASE_URL = "base_url";
+    private static final String KEY_NIM = "nim";
 
-    public static void setBaseUrl(Context context, String baseUrl) {
-        SharedPreferences prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+    private static SharedPrefManager instance;
+    private final SharedPreferences prefs;
+
+    private SharedPrefManager(Context context) {
+        prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+    }
+
+    public static synchronized SharedPrefManager getInstance(Context context) {
+        if (instance == null) {
+            instance = new SharedPrefManager(context);
+        }
+        return instance;
+    }
+
+    public void setBaseUrl(String baseUrl) {
         prefs.edit().putString(KEY_BASE_URL, baseUrl).apply();
     }
 
-    public static String getBaseUrl(Context context) {
-        SharedPreferences prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        return prefs.getString(KEY_BASE_URL, "https://reksti-face-api-e7fwfqfzb4f3gtgf.eastus2-01.azurewebsites.net/");
+    public String getBaseUrl() {
+        return prefs.getString(KEY_BASE_URL, "https://reksti-be-test-production.up.railway.app/");
+    }
+
+    public void setNIM(String nim) {
+        prefs.edit().putString(KEY_NIM, nim).apply();
+    }
+
+    public String getNIM() {
+        return prefs.getString(KEY_NIM, "");
     }
 }
