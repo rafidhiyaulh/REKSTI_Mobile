@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:padding="16dp">
 
     <LinearLayout
@@ -9,30 +10,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masukkan daftar NIM (pisahkan dengan baris baru):"
+            android:textColor="@color/textPrimary"
+            android:textSize="16sp"
+            android:paddingBottom="8dp" />
+
         <EditText
             android:id="@+id/et_student_list"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:hint="Masukkan daftar NIM (satu per baris)"
+            android:layout_height="150dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Contoh:\n13521001\n13521002"
+            android:padding="12dp"
             android:gravity="top"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
             android:inputType="textMultiLine"
-            android:background="#E0E0E0"
-            android:padding="8dp" />
+            android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/btn_create_class"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Buat Kelas"
-            android:layout_marginTop="12dp" />
+            style="@style/SmartButton"
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:id="@+id/tv_class_uid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Class UID akan muncul di sini"
+            android:textColor="@color/textSecondary"
             android:textSize="16sp"
-            android:paddingTop="16dp"
-            android:textColor="#333333" />
+            android:paddingTop="8dp" />
     </LinearLayout>
 </ScrollView>

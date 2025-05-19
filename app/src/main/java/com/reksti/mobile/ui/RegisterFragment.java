@@ -48,7 +48,7 @@ public class RegisterFragment extends Fragment {
         etNim = view.findViewById(R.id.et_nim);
         etNama = view.findViewById(R.id.et_nama);
         ivPreview = view.findViewById(R.id.iv_preview);
-        Button btnSelectImage = view.findViewById(R.id.btn_capture);  // Tombol pilih foto
+        Button btnSelectImage = view.findViewById(R.id.btn_upload_image); // FIXED ID
         Button btnRegister = view.findViewById(R.id.btn_register);
 
         btnSelectImage.setOnClickListener(v -> openGallery());
@@ -110,7 +110,6 @@ public class RegisterFragment extends Fragment {
     }
 
     private String encodeImageToBase64(Bitmap bitmap) {
-        // Resize jika terlalu besar
         Bitmap resized = Bitmap.createScaledBitmap(bitmap, 320, 320, true);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         resized.compress(Bitmap.CompressFormat.JPEG, 80, baos);

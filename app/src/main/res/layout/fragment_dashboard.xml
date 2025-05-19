@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/backgroundColor"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/namaTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama: ..."
+        android:textColor="@color/textPrimary"
         android:textSize="18sp"
-        android:paddingBottom="8dp" />
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/jumlahKelasTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Jumlah kelas: ..."
-        android:textSize="16sp" />
+        android:textColor="@color/textPrimary"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp" />
 
     <Button
-    android:id="@+id/btn_register_fragment"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Ke Form Registrasi"
-    android:layout_marginTop="16dp" />
-
-
+        android:id="@+id/btn_register_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ke Form Registrasi"
+        style="@style/SmartButton" />
 </LinearLayout>

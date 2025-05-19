@@ -2,26 +2,30 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:padding="16dp">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <EditText
-            android:id="@+id/et_class_uid"
+            android:id="@+id/et_class_uid_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Masukkan Class UID"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/textPrimary"
             android:inputType="text" />
 
         <Button
             android:id="@+id/btn_fetch_class"
+            style="@style/SmartButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ambil Info Kelas"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="12dp" />
 
         <TextView
             android:id="@+id/tv_class_info"
@@ -29,6 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Info kelas akan muncul di sini"
             android:textSize="16sp"
+            android:textColor="@color/textPrimary"
             android:paddingTop="16dp" />
     </LinearLayout>
 </ScrollView>
